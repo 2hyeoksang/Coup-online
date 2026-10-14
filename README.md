@@ -11,16 +11,12 @@
 
 ## 실행 방법
 
-```bash
-# 1. 의존성 설치
-npm install
-
-# 2. 서버 실행
-node server.js
-
-# 3. 브라우저에서 접속
-# http://localhost:3000
 ```
+npm install
+node server.js
+```
+
+실행 후 브라우저에서 `http://localhost:3000` 접속
 
 ## 게임 방법
 
@@ -42,7 +38,20 @@ node server.js
 - [ ] 챌린지 / 블로킹 시스템
 
 ## 프로젝트 구조
-<pre> ## 프로젝트 구조 ``` coup-online/ ├── server.js # 서버 시작, 이벤트 연결 ├── index.html # 게임 화면 구조 ├── style.css # 디자인 ├── script.js # 브라우저 동작 ├── game/ │ ├── deck.js # 덱 생성, 셔플 │ ├── state.js # 게임 상태, 턴 관리 │ ├── room.js # 방 생성, 참가, 퇴장 │ └── action.js # 행동 처리 └── images/ # 카드 이미지 ``` </pre>
+
+```
+coup-online/
+├── server.js       서버 시작, 이벤트 연결
+├── index.html      게임 화면 구조
+├── style.css       디자인
+├── script.js       브라우저 동작
+├── game/
+│   ├── deck.js     덱 생성, 셔플
+│   ├── state.js    게임 상태, 턴 관리
+│   ├── room.js     방 생성, 참가, 퇴장
+│   └── action.js   행동 처리
+└── images/         카드 이미지
+```
 
 ## 역할 카드
 
