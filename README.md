@@ -42,3 +42,24 @@ node server.js
 - [ ] 챌린지 / 블로킹 시스템
 
 ## 프로젝트 구조
+coup-online/
+├── server.js # 서버 시작, 이벤트 연결
+├── index.html # 게임 화면 구조
+├── style.css # 디자인
+├── script.js # 브라우저 동작
+├── game/
+│ ├── deck.js # 덱 생성, 셔플
+│ ├── state.js # 게임 상태, 턴 관리
+│ ├── room.js # 방 생성, 참가, 퇴장
+│ └── action.js # 행동 처리
+└── images/ # 카드 이미지
+
+## 역할 카드
+
+| 역할 | 능력 |
+|------|------|
+| 공작 (Duke) | 세금으로 코인 3개, 해외 원조 차단 |
+| 암살자 (Assassin) | 코인 3개로 암살 |
+| 사령관 (Captain) | 코인 2개 훔치기, 훔치기 차단 |
+| 외교관 (Ambassador) | 카드 교환, 훔치기 차단 |
+| 귀부인 (Contessa) | 암살 차단 |
