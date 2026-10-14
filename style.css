@@ -1,0 +1,188 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 30px;
+    background-color: #1a1a2e;
+    color: #eee;
+}
+
+input, button {
+    font-size: 16px;
+    padding: 8px 16px;
+    margin: 4px;
+    border-radius: 8px;
+    border: none;
+}
+
+input {
+    background-color: #2a2a4a;
+    color: #eee;
+}
+
+button {
+    background-color: #e94560;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c73650;
+}
+
+button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+#lobby, #waiting, #game {
+    margin-top: 20px;
+}
+
+#waiting, #game {
+    display: none;
+}
+
+.player {
+    font-size: 18px;
+    margin: 4px;
+}
+
+/* ===== 카드 ===== */
+.card {
+    display: inline-block;
+    width: 100px;
+    height: 150px;
+    border-radius: 10px;
+    margin: 8px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    border: 3px solid #333;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-duke { background-color: #7b2d8e; }
+.card-assassin { background-color: #8b0000; }
+.card-captain { background-color: #1a5276; }
+.card-contessa { background-color: #c2185b; }
+.card-ambassador { background-color: #2e7d32; }
+.card-back { background-color: #555; }
+
+.card-selectable {
+    cursor: pointer;
+    border-color: #e94560;
+    animation: pulse 1s infinite;
+}
+
+.card-selectable:hover {
+    border-color: #fff;
+    transform: scale(1.05);
+}
+
+@keyframes pulse {
+    0%, 100% { border-color: #e94560; }
+    50% { border-color: #ff8a9e; }
+}
+
+/* 죽은 카드 — 흑백 + 반투명 처리 */
+.card-dead {
+    filter: grayscale(100%);
+    opacity: 0.5;
+    border-color: #222;
+}
+
+/* ===== 플레이어 정보 ===== */
+.player-info {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #444;
+    border-radius: 10px;
+    min-width: 150px;
+    vertical-align: top;
+}
+
+.current-turn {
+    border-color: #e94560;
+    box-shadow: 0 0 15px #e94560;
+}
+
+.eliminated {
+    opacity: 0.4;
+}
+
+.targetable {
+    cursor: pointer;
+    border-color: #ffd700;
+}
+
+.targetable:hover {
+    border-color: #fff;
+    box-shadow: 0 0 15px #ffd700;
+}
+
+#my-area {
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid #e94560;
+    border-radius: 10px;
+}
+
+/* ===== 행동 버튼 ===== */
+#action-area {
+    margin-top: 15px;
+    padding: 15px;
+    border: 2px dashed #444;
+    border-radius: 10px;
+}
+
+.action-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-income { background-color: #2e7d32; }
+.btn-income:hover { background-color: #1b5e20; }
+.btn-foreign { background-color: #1565c0; }
+.btn-foreign:hover { background-color: #0d47a1; }
+.btn-coup { background-color: #b71c1c; }
+.btn-coup:hover { background-color: #7f0000; }
+
+/* ===== 게임 로그 ===== */
+#log-area {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    text-align: left;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.log-msg {
+    font-size: 13px;
+    color: #aaa;
+    margin: 4px 0;
+    padding-left: 8px;
+    border-left: 2px solid #444;
+}
+
+/* ===== 게임 종료 ===== */
+.btn-lobby {
+    background-color: #1565c0;
+    font-size: 18px;
+    padding: 12px 32px;
+    margin-top: 15px;
+}
+
+.btn-lobby:hover {
+    background-color: #0d47a1;
+}

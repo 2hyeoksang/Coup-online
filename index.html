@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>쿠 온라인</title>
+    <!-- CSS 파일을 불러오는 태그. href = 파일 경로 -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>쿠(Coup) 온라인</h1>
+
+    <!-- 로비 -->
+    <div id="lobby">
+        <input id="nicknameInput" type="text" placeholder="닉네임 입력"><br><br>
+        <button id="createBtn">방 만들기</button><br><br>
+        <input id="codeInput" type="text" placeholder="방 코드 입력" maxlength="4">
+        <button id="joinBtn">참가하기</button>
+    </div>
+
+    <!-- 대기실 -->
+    <div id="waiting">
+        <h2>방 코드: <span id="roomCode"></span></h2>
+        <p>이 코드를 친구들에게 공유하세요!</p>
+        <h3>참가자</h3>
+        <div id="playerList"></div>
+        <button id="startBtn" style="display:none; margin-top:20px; font-size:20px; padding:12px 32px;">
+            게임 시작
+        </button>
+    </div>
+
+    <!-- 게임 -->
+    <div id="game">
+        <div id="opponents"></div>
+
+        <div id="my-area">
+            <h3 id="my-area-title">내 카드</h3>
+            <div id="myCards"></div>
+            <p>코인: <span id="myCoins">0</span>개</p>
+        </div>
+
+        <p id="turnInfo" style="font-size: 20px; margin-top: 15px;"></p>
+
+        <div id="action-area" style="display:none;">
+            <p id="action-prompt" style="margin-bottom: 10px;">행동을 선택하세요</p>
+            <button class="action-btn btn-income" onclick="doAction('income')">수입 (코인 +1)</button>
+            <button class="action-btn btn-foreign" onclick="doAction('foreign_aid')">해외 원조 (코인 +2)</button>
+            <button class="action-btn btn-coup" id="coupBtn" onclick="startCoup()">쿠데타 (코인 -7)</button>
+        </div>
+
+        <div id="log-area">
+            <div style="font-size: 14px; color: #888; margin-bottom: 4px;">게임 로그</div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- 우리가 만든 JS 파일 불러오기 -->
+    <script src="/script.js"></script>
+</body>
+</html>
