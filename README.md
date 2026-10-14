@@ -42,17 +42,7 @@ node server.js
 - [ ] 챌린지 / 블로킹 시스템
 
 ## 프로젝트 구조
-coup-online/
-├── server.js # 서버 시작, 이벤트 연결
-├── index.html # 게임 화면 구조
-├── style.css # 디자인
-├── script.js # 브라우저 동작
-├── game/
-│ ├── deck.js # 덱 생성, 셔플
-│ ├── state.js # 게임 상태, 턴 관리
-│ ├── room.js # 방 생성, 참가, 퇴장
-│ └── action.js # 행동 처리
-└── images/ # 카드 이미지
+<pre> ## 프로젝트 구조 ``` coup-online/ ├── server.js # 서버 시작, 이벤트 연결 ├── index.html # 게임 화면 구조 ├── style.css # 디자인 ├── script.js # 브라우저 동작 ├── game/ │ ├── deck.js # 덱 생성, 셔플 │ ├── state.js # 게임 상태, 턴 관리 │ ├── room.js # 방 생성, 참가, 퇴장 │ └── action.js # 행동 처리 └── images/ # 카드 이미지 ``` </pre>
 
 ## 역할 카드
 
